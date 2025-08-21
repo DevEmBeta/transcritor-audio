@@ -8,7 +8,7 @@ st.set_page_config(page_title="Transcritor de Áudio", layout="centered")
 
 st.title("🎙️ Transcritor de Áudio com Whisper")
 
-uploaded_file = st.file_uploader("Envie um arquivo de áudio (MP3, WAV, OGG)", type=["mp3", "wav", "ogg", "opus"])
+uploaded_file = st.file_uploader("Envie um arquivo de áudio (MP3, WAV, OGG)", type=["mp3", "wav", "ogg", "waptt.opus"])
 
 @st.cache_resource
 def load_model():
@@ -32,4 +32,5 @@ if uploaded_file is not None:
         result["text"],
         file_name="transcricao.txt"
     )
+
 
